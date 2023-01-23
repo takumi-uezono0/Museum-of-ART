@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import Button from "@material-ui/core/Button";
 import TextInput from ".";
 import { Header } from "../components/Header";
