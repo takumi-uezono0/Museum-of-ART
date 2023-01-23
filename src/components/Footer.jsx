@@ -3,7 +3,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <>
-      <a class="logo" href="/products">
+      <a className="logo" href="/products">
         Cute Puppies Express! on Footer!
       </a>
     </>
