@@ -121,14 +121,6 @@ export const Contact = (props) => {
           onChange={inputDescription}
         />{" "}
       </div>
-      <Button
-        onClick={props.handleClose}
-        variant="outlined"
-        color="error"
-        id="CancelButton"
-      >
-        キャンセル
-      </Button>
       <Button onClick={submitForm} variant="contained" id="SendButton">
         send
       </Button>
