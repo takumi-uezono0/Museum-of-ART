@@ -41,5 +41,9 @@
   },
   "devDependencies": {
     "rollup-plugin-terser": "^7.0.2"
+  },
+  "engines": {
+    "node": "v18.2.0",
+    "npm": "8.9.0"
   }
 }

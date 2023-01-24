@@ -9,6 +9,7 @@ export const Contact = (props) => {
   const [description, setDescription] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [sendComplete, setSendComplete] = useState(false);
 
   // Functions triggered by inputting text value
   const inputDescription = useCallback(
@@ -73,13 +74,13 @@ export const Contact = (props) => {
       };
 
       const WEBHOOK_URL =
-        "https://hooks.slack.com/services/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";
+        "https://hooks.slack.com/services/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";
       // fetchメソッドでフォームの内容をSlackのIncoming Webhook URL に送信する
       fetch(WEBHOOK_URL, {
         method: "POST",
         body: JSON.stringify(payload),
       }).then(() => {
-        alert("送信が完了しました。追ってご連絡いたします🙌");
+        setSendComplete(!sendComplete);
         setDescription("");
         setEmail("");
         setName("");
@@ -95,33 +96,55 @@ export const Contact = (props) => {
         <span>C</span>ontact
       </p>
       <div className="ContactForm">
-        <p>当サイトについてご意見・ご要望をお聞かせ下さい。</p>
-        <TextInput
-          label={"名前(必須)"}
-          multiline={false}
-          rows={1}
-          value={name}
-          type={"text"}
-          onChange={inputName}
-        />
-        <TextInput
-          label={"メールアドレス(必須)"}
-          multiline={false}
-          rows={1}
-          value={email}
-          type={"email"}
-          onChange={inputEmail}
-        />
-        <TextInput
-          label={"お問い合わせ内容(必須)"}
-          multiline={true}
-          rows={10}
-          value={description}
-          type={"text"}
-          onChange={inputDescription}
-        />{" "}
+        <p id="message">当サイトについてご意見・ご要望をお聞かせ下さい。</p>
+        {sendComplete && (
+          <div className="sendComplete">
+            <p className="sectionTitle">
+              <span>T</span>hanks for
+              <br />
+              your
+              <br />
+              cooperation!!
+              <br />
+              <small>（ご協力ありがとうございます！）</small>
+            </p>
+          </div>
+        )}
+        {!sendComplete && (
+          <>
+            <TextInput
+              label={"名前(必須)"}
+              multiline={false}
+              rows={1}
+              value={name}
+              type={"text"}
+              onChange={inputName}
+            />
+            <TextInput
+              label={"メールアドレス(必須)"}
+              multiline={false}
+              rows={1}
+              value={email}
+              type={"email"}
+              onChange={inputEmail}
+            />
+            <TextInput
+              label={"お問い合わせ内容(必須)"}
+              multiline={true}
+              rows={10}
+              value={description}
+              type={"text"}
+              onChange={inputDescription}
+            />{" "}
+          </>
+        )}
       </div>
-      <Button onClick={submitForm} variant="contained" id="SendButton">
+      <Button
+        onClick={submitForm}
+        disabled={sendComplete}
+        variant="contained"
+        id="SendButton"
+      >
         send
       </Button>
 
