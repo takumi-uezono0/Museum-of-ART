@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from "react";
-import TextInput from "./Contact's/index";
+import TextInput from "./Contact's";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import "./Contact's/Contact.css";
+import { Button } from "@mui/material";
 
 export const Contact = (props) => {
   const [description, setDescription] = useState("");
@@ -72,7 +73,7 @@ export const Contact = (props) => {
       };
 
       const WEBHOOK_URL =
-        "https://hooks.slack.com/services/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";
+        "https://hooks.slack.com/services/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";
       // fetchメソッドでフォームの内容をSlackのIncoming Webhook URL に送信する
       fetch(WEBHOOK_URL, {
         method: "POST",
@@ -120,17 +121,17 @@ export const Contact = (props) => {
           onChange={inputDescription}
         />{" "}
       </div>
-      <button
+      <Button
         onClick={props.handleClose}
         variant="outlined"
         color="error"
         id="CancelButton"
       >
         キャンセル
-      </button>
-      <button onClick={submitForm} variant="contained" id="SendButton">
+      </Button>
+      <Button onClick={submitForm} variant="contained" id="SendButton">
         send
-      </button>
+      </Button>
 
       <Footer />
     </div>
