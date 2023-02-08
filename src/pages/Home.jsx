@@ -1,15 +1,15 @@
 import React from "react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import img1 from "./images/red 1mainMap.png";
+import Img1 from "./images/red 1mainMap.png";
 import Clock from "./Clock";
 import "./Home.css";
 
 export const Home = () => {
   return (
-    <>
+    <div className="Home1">
       <Header />
-      <div className="Home1">
+      <div>
         <p id="clock1">
           <Clock />
         </p>
@@ -30,7 +30,7 @@ export const Home = () => {
           </a>
         </div>
         <div className="content">
-          <img src={img1} />
+          <img src={Img1} />
         </div>
         <p id="title1">現代アートをもっと身近に</p>
         <p id="text1">
@@ -49,6 +49,6 @@ export const Home = () => {
         </p>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
