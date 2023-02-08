@@ -9,7 +9,7 @@ export const Header = () => {
       <a className="logo" href="/">
         MAPへ
       </a>
-      <a className="logo" href="/Cart">
+      <a className="logo" href="/cart">
         ShoppngCartへ
       </a>
     </header>
