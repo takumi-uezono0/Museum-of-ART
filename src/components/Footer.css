@@ -1,0 +1,29 @@
+.footer-flame {
+  background-color: #6c6c6c;
+  background-size: 100% 0;
+  text-align: center;
+}
+
+.M {
+  display: flex;
+}
+.M img {
+  width: 166px;
+  height: 77px;
+  margin: 60px;
+  padding-right: 20em;
+}
+
+.M li {
+  color: #fffefe;
+  font-size: 32px;
+  display: inline-block;
+  padding-top: 50px;
+  padding-right: 1em;
+  list-style: none;
+}
+.C {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 15px;
+}
