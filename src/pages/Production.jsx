@@ -20,7 +20,6 @@ export const Production = () => {
       <p id="production1">
         <span id="production2">P</span>roduction
       </p>
-      <p id="production1"><span id="production2">P</span>roduction</p>
       <div id="production3">
         <div id="production4">
           <img id="image1" src={img1} />
@@ -44,8 +43,6 @@ export const Production = () => {
               <br />
               『marilyn monroe』
             </p>
-            <p id="text2">Andy Warhol<br />
-            『marilyn monroe』</p>
 
             <p>￥25,000,000,000-</p>
             <input id="value2" type="submit" value="カートに入れる" name=" " />
@@ -59,8 +56,7 @@ export const Production = () => {
               <br />
               『Mother and Child, Divided』
             </p>
-            <p id="text3">Damien Hirst<br />
-            『Mother and Child, Divided』</p>
+           
             <p>￥21,100,000,000-</p>
             <input id="value3" type="submit" value="カートに入れる" name=" " />
           </div>
@@ -87,8 +83,6 @@ export const Production = () => {
               <br />
               『untitled』
             </p>
-            <p id="text5">Jean-Michel Basquiat<br />
-            『untitled』</p>
             <p>￥110,500,000-</p>
             <input id="value5" type="submit" value="カートに入れる" name=" " />
           </div>
@@ -101,8 +95,7 @@ export const Production = () => {
               <br />
               『Number28』
             </p>
-            <p id="text6">Jackson Pollock<br />
-            『Number28』</p>
+           
             <p>￥500,000,000-</p>
             <input id="value6" type="submit" value="カートに入れる" name=" " />
           </div>
@@ -115,11 +108,6 @@ export const Production = () => {
               <br />
               『Composition：No. II, with Yellow, Red and Blue』
             </p>
-            <p>￥2,700,000,000-</p>
-            <input id="value7" type="submit" value="カートに入れる" name=" " />
-
-            <p id="text7">Piet Mondrian<br />
-            『Composition：No. II, with Yellow, Red and Blue』</p>
             <p>￥2,700,000,000-</p>
             <input id="value7" type="submit" value="カートに入れる" name=" " />   
           </div>
