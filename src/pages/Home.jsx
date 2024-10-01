@@ -16,8 +16,8 @@ export const Home = () => {
       </div>
       <div id="Home2">
         <div id="tab1">
-          <a href="/cart">Shopping cart 　/ 　</a>
-          <a href="/production">Production 　/　</a>
+          <a href="/cart">Shopping cart / </a>
+          <a href="/production">Production / </a>
           <a href="/contact">
             Contact
             <br />
